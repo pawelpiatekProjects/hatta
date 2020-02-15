@@ -4,6 +4,9 @@ import {Link} from 'gatsby';
 
 const NavigationWrapper = styled.div`
   display: flex;
+  top: 20px;
+  left: 30px;
+  position: absolute;
   align-items: center;
   justify-content: flex-start;
   font-family: 'Montserrat';
@@ -21,8 +24,6 @@ margin-right: 10px;
 `;
 
 const NavigationList = styled.ul`
-margin: 0;
-padding: 0;
 list-style: none;
 display: flex;
 `;
