@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df66b1aa-d340-4359-a56b-b85b7b0820a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/globalStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/gallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="600">
+              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -213,15 +204,16 @@
       <workItem from="1581767342275" duration="6174000" />
       <workItem from="1581791211179" duration="1609000" />
       <workItem from="1581793339109" duration="1022000" />
-      <workItem from="1581794381692" duration="707000" />
+      <workItem from="1581794381692" duration="2981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9512000" />
+    <option name="totallyTimeSpent" value="11786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09968017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -241,7 +233,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.21055438" />
+      <window_info anchor="right" id="Terminal" order="3" weight="0.21055438" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,8 +257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="600">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
