@@ -7,6 +7,11 @@ const NavigationWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-family: 'Montserrat';
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const Logo = styled.div`
@@ -26,12 +31,14 @@ const NavigationListItem = styled.li`
 font-weight: 600;
 font-size: 15px;
 margin-left: 32px;
+
+  
 `;
 
 
 const Navigation = () => (
   <NavigationWrapper>
-    <Logo>HATTA</Logo>
+    <Logo> <Link to="/"> HATTA </Link></Logo>
     <NavigationList>
       <NavigationListItem>
         <Link to="/articles">articles</Link>
