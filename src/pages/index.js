@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Navigation from "../components/Navigation/Navigation"
 import Button from "../components/Button/Button"
 import { graphql } from "gatsby"
+import Image from 'gatsby-image';
 
 const ContentWrapper = styled.div`
 width: 65%;
@@ -27,8 +28,8 @@ width: 40%;
 }
 `
 
-const ImageWrapper = styled.img`
-position: absolute;
+const StyledImage = styled(Image)`
+position: absolute !important;
 top: 0;
 right: 0;
 width: 35%;
@@ -45,11 +46,7 @@ const IndexPage = ({ data }) => (
       <Button>estimate project</Button>
     </ContentWrapper>
 
-      <ImageWrapper
-        src={data.file.childImageSharp.fluid.src}
-        srcSet={data.file.childImageSharp.fluid.srcSet}
-        sizes={data.file.childImageSharp.fluid.srcSet.sizes}
-      />
+      <StyledImage fluid={data.file.childImageSharp.fluid}/>
 
   </>
 )
@@ -59,9 +56,7 @@ export const query = graphql`
         file(name:{eq: "hero"}){
             childImageSharp{
                 fluid(maxWidth: 800, maxHeight: 1200, quality: 100){
-                    src
-                    srcSet
-                    sizes
+                    ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
