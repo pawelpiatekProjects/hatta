@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation/Navigation"
 import Button from "../components/Button/Button"
 import { graphql } from "gatsby"
 import Image from 'gatsby-image';
+import Post from "../components/Post/post"
 
 const ContentWrapper = styled.div`
 width: 65%;
@@ -40,6 +41,7 @@ object-fit: cover;
 const IndexPage = ({ data }) => (
   <>
     <ContentWrapper>
+      <Post/>
       <h1>Your new space</h1>
       {console.log(data)}
       <p>While artists work from real to the abstract, architects must work from the abstract to the real.</p>
