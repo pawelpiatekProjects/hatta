@@ -15,16 +15,26 @@ const pageData = {
     paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
 }
 
-const ArticlesPage = ({ data }) => (
-  <>
-      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+const ArticlesPage = ({ data }) => {
+
+  const {allMdx: {nodes}} = data;
+
+  return (
+    <>
+      <PageInfo title={pageData.title} paragraph={pageData.paragraph}/>
       <ArticlesWrapper>
-          {data.allMdx.nodes.map(item => (
-            <ArticlePreview title={item.frontmatter.title} excerpt={item.excerpt} />
-          ))}
+        {nodes.map(({excerpt, frontmatter: {title, slug, author, featuredImage}}) => (
+          <ArticlePreview
+            title={title}
+            excerpt={excerpt}
+            image={featuredImage.childImageSharp.fluid}
+          />
+        ))}
       </ArticlesWrapper>
-  </>
-);
+    </>
+    )
+
+};
 
 export const query = graphql`
     {
@@ -34,6 +44,13 @@ export const query = graphql`
                     title
                     slug
                     author
+                    featuredImage {
+                        childImageSharp{
+                            fluid(maxWidth: 700, maxHeight: 500){
+                                ...GatsbyImageSharpFluid_tracedSVG
+                            }
+                        }
+                    }
                 }
                 excerpt(pruneLength: 50)
             }
