@@ -34,6 +34,7 @@ export const query = graphql`
         }
     }`
 
+
 const PostLayout = ({ data }) => {
   // console.log(props)
   return (
