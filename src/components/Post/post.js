@@ -10,7 +10,6 @@ const query = graphql`{
 }
 `;
 
-
 const Post = () => {
   const data = useStaticQuery(query);
 
