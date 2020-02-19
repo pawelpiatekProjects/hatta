@@ -4,7 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require(`path`)
+const path = require(`path`);
+const slugify = require('slugify');
 
 exports.createPages = async({ graphql, actions }) => {
   const { createPage } = actions
@@ -14,44 +15,32 @@ exports.createPages = async({ graphql, actions }) => {
   // products, portfolio items, landing pages, etc.
   // Variables can be added as the second function parameter
   const result = await graphql(`
-    query postQuery {
-        allMdx {
-            nodes {
-                frontmatter {
-                    title
-                    slug
-                    author
-                  featuredImage {
-                    childImageSharp{
-                      fluid(maxWidth: 700, maxHeight: 500){
-                        src
-                      }
-                    }
-                  }
-                }
-                excerpt(pruneLength: 50)
-            }
+   query queryCMSPage {
+  allDatoCmsArticle {
+    nodes{
+      id
+      title
         }
-}
+      }
+    }
   `);
 
 
 
     // Create blog post pages.
-    result.data.allMdx.nodes.forEach(edge => {
+    result.data.allDatoCmsArticle.nodes.forEach(edge => {
+
+      const slugifiedTitle = slugify(edge.title,{
+        lower:true
+      });
+      console.log(slugifiedTitle);
       createPage({
         // Path for this page — required
-        path: `${edge.frontmatter.slug}`,
+        path: `articles/${slugifiedTitle}`,
         component: blogPostTemplate,
         context: {
-          // Add optional context data to be inserted
-          // as props into the page component..
-          //
-          // The context data can also be used as
-          // arguments to the page GraphQL query.
-          //
-          // The page "path" is always available as a GraphQL
-          // argument.
+          slug: slugifiedTitle, // we put all query data to context
+          id: edge.id
         },
       })
     })
